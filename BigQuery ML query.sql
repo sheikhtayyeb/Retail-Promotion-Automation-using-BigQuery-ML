@@ -1,6 +1,6 @@
 -- CREATE OR REPLACE MODEL
---   `rhic-innovation.models.llm_modelv3` REMOTE
--- WITH CONNECTION `rhic-innovation.us.llm-connection9599` OPTIONS (ENDPOINT = 'gemini-2.0-flash-001');
+--   `$PROJECT.models.llm_modelv3` REMOTE
+-- WITH CONNECTION `$PROJECT.us.llm-connection9599` OPTIONS (ENDPOINT = 'gemini-2.0-flash-001');
 
 
 SELECT text,
@@ -15,14 +15,14 @@ SELECT text,
       FROM
       (SELECT text,ml_generate_text_llm_result FROM
       ML.GENERATE_TEXT(
-        MODEL `rhic-innovation.models.llm_modelv3`,
+        MODEL `$PROJECT.models.llm_modelv3`,
                 ( SELECT * 
                   FROM(
                       WITH numbered_data AS (
                         SELECT
                           *,
                           ROW_NUMBER() OVER () AS row_num
-                        FROM `rhic-innovation.Dataset_1.retail-data1`
+                        FROM `$PROJECT.Dataset_1.retail-data1`
                       )
                     SELECT CONCAT(
       """ 
