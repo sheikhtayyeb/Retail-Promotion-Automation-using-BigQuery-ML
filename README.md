@@ -1,4 +1,4 @@
-# Retail-Promotion-Automation-using-BigQuery-ML
+# Retail-Offer-Pattern-Extractor-using-BigQuery-ML
 
 ## Overview
 
