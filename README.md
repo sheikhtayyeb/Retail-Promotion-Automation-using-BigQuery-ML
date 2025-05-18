@@ -1,7 +1,5 @@
 # Retail-Promotion-Automation-using-BigQuery-ML
 
-# Retail Promotion Parser
-
 ## Overview
 
 This project uses Google BigQuery and a generative language model to automatically extract structured information from unstructured retail promotion text. By analyzing phrases like "Buy 1, Get 1 Free" or "$10 off orders over $100", the system extracts key promotion attributes into a standardized format.
